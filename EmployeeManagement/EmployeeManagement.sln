@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePersistence", "..\EmployeePersistence\EmployeePersistence.csproj", "{F4C6EB1F-1FF4-4D3A-B5A7-0AB0AEBBD24D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeLinqTests", "..\EmployeeLinqTests\EmployeeLinqTests.csproj", "{6062C954-A605-4C83-A9BB-28234AF46371}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLinqTests", "..\EmployeeLinqTests\EmployeeLinqTests.csproj", "{6062C954-A605-4C83-A9BB-28234AF46371}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
