@@ -65,5 +65,21 @@ namespace EmployeeLinqTests
 
             result.Should().BeEquivalentTo("Marya Oolahan");
         }
+
+        [Fact]
+        public void EmployeesUnderAgeOf18Exist_ReturnsTrue_IfThereAreEmployeesUnderAgeOf18()
+        {
+            var result = EmployeeFunctions.EmployeesUnderAgeOf18Exist(employees);
+
+            result.Should().BeTrue();
+        }
+
+        [Fact]
+        public void EmployeeWithoutSurnameExists_ReturnsFalse_IfAllEmployeesHaveSurname()
+        {
+            var result = EmployeeFunctions.EmployeeWithoutSurnameExists(employees);
+
+            result.Should().BeFalse();
+        }
     }
 }

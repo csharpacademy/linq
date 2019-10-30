@@ -11,9 +11,11 @@ namespace EmployeePersistence
 
         public EmployeeRepository()
         {
-            using var r = new StreamReader("empList.json");
-            var json = r.ReadToEnd();
-            Employees = JsonConvert.DeserializeObject<List<Employee>>(json);
+            using (var r = new StreamReader("empList.json"))
+            {
+                var json = r.ReadToEnd();
+                Employees = JsonConvert.DeserializeObject<List<Employee>>(json);
+            }
         }
 
     }

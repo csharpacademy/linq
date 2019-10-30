@@ -27,5 +27,15 @@ namespace EmployeeManagement
         {
             throw new NotImplementedException();
         }
+
+        public static bool EmployeesUnderAgeOf18Exist(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static bool EmployeeWithoutSurnameExists(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
