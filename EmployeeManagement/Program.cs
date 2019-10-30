@@ -1,14 +1,10 @@
-﻿using EmployeeManagement.Contracts;
-using EmployeePersistance;
+﻿using EmployeePersistance;
 using System;
-using System.Collections.Generic;
 
 namespace EmployeeManagement
 {
     class Program
     {
-        // this is the list 
-        private static List<IEmployee> employees = new List<IEmployee>();
 
         static void Main(string[] args)
         {
