@@ -3,17 +3,22 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 
-namespace EmployeePersistence
+namespace EmployeePersistance
 {
     public class EmployeeRepository
     {
-        public IEnumerable<Employee> Employees { get; }
-
+        private IEnumerable<Employee> employees = new List<Employee>();
         public EmployeeRepository()
         {
-            using var r = new StreamReader("empList.json");
-            var json = r.ReadToEnd();
-            Employees = JsonConvert.DeserializeObject<List<Employee>>(json);
+            using (StreamReader r = new StreamReader("empList.json"))
+            {
+                string json = r.ReadToEnd();
+                employees = JsonConvert.DeserializeObject<List<Employee>>(json);
+            }
+        }
+        public IEnumerable<Employee> Employees()
+        {
+            return employees;
         }
     }
 
