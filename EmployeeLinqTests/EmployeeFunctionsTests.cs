@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using EmployeePersistence;
+using FluentAssertions;
+using System.Collections.Generic;
 using Xunit;
 
 namespace EmployeeLinqTests
@@ -21,7 +20,7 @@ namespace EmployeeLinqTests
         {
             var result = EmployeeFunctions.CountEmployeesOlderThan50(employees);
 
-            Assert.Equal(483, result);
+            result.Should().Be(483);
         }
 
         [Fact]
@@ -29,19 +28,33 @@ namespace EmployeeLinqTests
         {
             var result = EmployeeFunctions.ListSurnamesOfEmployeesEarningOver9900(employees);
 
-            Assert.Equal(
-                new List<string> {
-                "Licari",
-                "Andrew",
-                "Noyes",
-                "MacLucais",
-                "Worham",
-                "Grimsdith",
-                "Blundan",
-                "Gorstidge",
-                "McAvinchey",
-                "O'Deoran"
-                }, result);
+            var expectedResult = new List<string>
+            {
+                "Licari", "Andrew", "Noyes", "MacLucais", "Worham",
+                "Grimsdith", "Blundan", "Gorstidge", "McAvinchey", "O'Deoran"
+            };
+
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
+        public void FindEmployeesYoungerThan18AndEarningMoreThan1000()
+        {
+            var result = EmployeeFunctions.FindEmployeesYoungerThan18AndEarningLessThan1100(employees);
+
+            var expectedResult = new List<Employee>
+            {
+                new Employee
+                {
+                    Age = 10,
+                    Id = 188,
+                    Name = "Bondy",
+                    Surname = "McGloughlin",
+                    Wage = 1054
+                }
+            };
+
+            result.Should().BeEquivalentTo(expectedResult);
         }
     }
 }

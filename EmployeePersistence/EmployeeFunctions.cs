@@ -16,5 +16,10 @@ namespace EmployeePersistence
         {
             throw new NotImplementedException();
         }
+
+        public static List<Employee> FindEmployeesYoungerThan18AndEarningLessThan1100(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
