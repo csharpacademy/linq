@@ -22,5 +22,10 @@ namespace EmployeeManagement
         {
             throw new NotImplementedException();
         }
+
+        public static string Find_NameAndSurname_OfTheOldestEmployeeWhoEarnsBetween6500And7000(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

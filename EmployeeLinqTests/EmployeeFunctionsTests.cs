@@ -39,7 +39,7 @@ namespace EmployeeLinqTests
         }
 
         [Fact]
-        public void FindEmployeesYoungerThan18AndEarningMoreThan1000()
+        public void FindEmployeesYoungerThan18AndEarningLessThan1100()
         {
             var result = EmployeeFunctions.FindEmployeesYoungerThan18AndEarningLessThan1100(employees);
 
@@ -56,6 +56,14 @@ namespace EmployeeLinqTests
             };
 
             result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Fact]
+        public void Find_NameAndSurname_OfTheOldestEmployeeWhoEarnsBetween6500And7000()
+        {
+            var result = EmployeeFunctions.Find_NameAndSurname_OfTheOldestEmployeeWhoEarnsBetween6500And7000(employees);
+
+            result.Should().BeEquivalentTo("Marya Oolahan");
         }
     }
 }
