@@ -1,5 +1,4 @@
-﻿using EmployeePersistance;
-using EmployeePersistence;
+﻿using EmployeePersistence;
 using System;
 using System.Collections.Generic;
 
@@ -16,7 +15,7 @@ namespace EmployeeManagement
             //{
             //    Console.WriteLine($"{emp.Id} {emp.Name}");
             //}
-            repo.Employees().Print();
+            repo.Employees.Print();
             Console.ReadLine();
         }
 
