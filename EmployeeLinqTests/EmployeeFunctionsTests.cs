@@ -1,7 +1,7 @@
+using EmployeeManagement;
 using EmployeePersistence;
 using FluentAssertions;
 using System.Collections.Generic;
-using EmployeeManagement;
 using Xunit;
 
 namespace EmployeeLinqTests
@@ -80,6 +80,56 @@ namespace EmployeeLinqTests
             var result = EmployeeFunctions.EmployeeWithoutSurnameExists(employees);
 
             result.Should().BeFalse();
+        }
+
+        [Fact]
+        public void AverageWageWithoutTop100andBottom100Wages()
+        {
+            var result = EmployeeFunctions.AverageWageWithoutTop100andBottom100Wages(employees);
+
+            result.Should().Be(5405.55);
+        }
+
+        [Fact]
+        public void FindTheMostPopularNameStartingWithTheOldestLetterOfTheAlphabet()
+        {
+            var result = EmployeeFunctions.FindTheMostPopularNameStartingWithTheOldestLetterOfTheAlphabet(employees);
+            result.Should().Be("Virge");
+        }
+
+        [Fact]
+        public void FindTheNumberOfEmployeesWhosSalaryIsDivisibleByTheirId()
+        {
+            var result = EmployeeFunctions.FindTheNumberOfEmployeesWhosSalaryIsDivisibleByTheirId(employees);
+            result.Should().Be(7);
+        }
+
+        [Fact]
+        public void FindTheAgeDifferenceBetweenTheEldestAndYoungestEmployee()
+        {
+            var result = EmployeeFunctions.FindTheAgeDifferenceBetweenTheEldestAndYoungestEmployee(employees);
+            result.Should().Be(99);
+        }
+
+        [Fact]
+        public void FindTheNumberOfEmployeesWhosNameIsLongerThenSurname()
+        {
+            var result = EmployeeFunctions.FindTheNumberOfEmployeesWhosNameIsLongerThenSurname(employees);
+            result.Should().Be(276);
+        }
+
+        [Fact]
+        public void FindTheYoungestEmployeeNameWithTheHighestWage()
+        {
+            var result = EmployeeFunctions.FindTheYoungestEmployeeNameWithTheHighestWage(employees);
+            result.Should().Be("Bri");
+        }
+
+        [Fact]
+        public void FindTheThirdBestWageEmployeeNameWithSurnameLonger5()
+        {
+            var result = EmployeeFunctions.FindTheThirdBestWageEmployeeNameWithSurnameLonger5(employees);
+            result.Should().Be("Susie");
         }
     }
 }

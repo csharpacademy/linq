@@ -1,8 +1,6 @@
-﻿using System;
+﻿using EmployeePersistence;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EmployeePersistence;
 
 namespace EmployeeManagement
 {
@@ -34,6 +32,41 @@ namespace EmployeeManagement
         }
 
         public static bool EmployeeWithoutSurnameExists(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static double AverageWageWithoutTop100andBottom100Wages(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string FindTheMostPopularNameStartingWithTheOldestLetterOfTheAlphabet(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static int FindTheNumberOfEmployeesWhosSalaryIsDivisibleByTheirId(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static int FindTheAgeDifferenceBetweenTheEldestAndYoungestEmployee(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static int FindTheNumberOfEmployeesWhosNameIsLongerThenSurname(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string FindTheYoungestEmployeeNameWithTheHighestWage(IEnumerable<Employee> employees)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string FindTheThirdBestWageEmployeeNameWithSurnameLonger5(IEnumerable<Employee> employees)
         {
             throw new NotImplementedException();
         }
