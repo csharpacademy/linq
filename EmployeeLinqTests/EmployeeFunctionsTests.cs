@@ -122,7 +122,7 @@ namespace EmployeeLinqTests
         public void FindTheYoungestEmployeeNameWithTheHighestWage()
         {
             var result = EmployeeFunctions.FindTheYoungestEmployeeNameWithTheHighestWage(employees);
-            result.Should().Be("Bri");
+            result.Should().Be("Brittaney");
         }
 
         [Fact]
